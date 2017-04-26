@@ -3,18 +3,16 @@
 1. Customize CSS per queue
 1. Hide time fields
 1. "Temporary replacement owner" custom role
-1. Hide reminders globally / ticket display panel only
 1. Copy this comment to parent ticket, optional txn cf for yes/no
-1. "Initial resolved" date cf of scrip
 1. Default search builder queue
 1. Add more help text to simple search page
-1. Does RT::Extension::AttachmentsZip work on 4.4?
-1. Article templates
 1. Add custom links to ticket Action menu
 1. Automatic language translation on reply
 1. On CF change, update linked tickets with same change
 1. Hit a web API from a scrip
 1. Add Type to txn display (in markup)
+1. Translate "Incident Reports" to "Suspicious Events"
+1. Write new tests in an extension, especially email
 
 # Hard
 
@@ -31,3 +29,12 @@
 1. All search page: create page with search results from tickets, assets, users, etc.
 1. Dig MX lookup on RTIR lookup tool
 1. Provide a row at the bottom of search results with functions like SUM
+1. Add checkboxes for selecting AttachmentZip attachments to download
+
+# Done
+1. Article templates
+1. Does RT::Extension::AttachmentsZip work on 4.4?
+1. Add scrip action/condition as a file instead of user-defined
+1. "Initial resolved" date cf of scrip  (slide 358)
+1. Hide reminders globally / ticket display panel only
+
