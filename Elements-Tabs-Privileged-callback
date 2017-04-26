@@ -20,4 +20,12 @@ RT::Interface::Web::EscapeURI(\$search);
 
 PageMenu()->child('actions')->child('google-search', title => loc('Google This'), path => 'https://google.com/search?q=' . $search);
 
+
+if ($obj->Owner == $session{CurrentUser}->Id) {
+    PageMenu()->child('actions')->child('untake', title => loc('Untake'), path => '/Ticket/Modify.html?id=' . $id . '&Owner=' . RT->Nobody->Id);
+}
+else {
+    PageMenu()->child('actions')->child('take-and', title => loc('Take And'), path => '/Ticket/Modify.html?id=' . $id . '&Owner=' . $session{CurrentUser}->Id);
+}
+
 </%INIT>
