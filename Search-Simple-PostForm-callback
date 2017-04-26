@@ -1,0 +1,4 @@
+<h1>The Manual for the Manual</h1>
+<hr>
+
+<p>Hello <% $session{CurrentUser}->RealName %>!</p>
