@@ -1,0 +1,27 @@
+@CustomFields = (
+    {   Name        => 'Copy to Parent',
+        Type        => 'SelectSingle',
+        RenderType  => 'Dropdown',
+        LookupType  => RT::Transaction->CustomFieldLookupType,
+        Description => 'From RT::Extension::ParentComment',
+        Values => [
+            { Name => "Yes",  SortOrder => 1 },
+            { Name => "No",   SortOrder => 2 },
+        ]
+    },
+);
+
+@ScripActions = (
+    {  Name        => 'Add Comment to Parent',    # loc
+       Description => 'Add Comment to Parent' ,   # loc
+       ExecModule => 'CommentOnParent',
+    },
+);
+
+@Scrips = (
+    {  Description    => 'On copy to parent, add comment to parent',
+       ScripCondition => 'On Comment',
+       ScripAction    => 'Add Comment to Parent',
+       Template       => 'Blank',
+    },
+);
