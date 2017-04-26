@@ -1,0 +1,8 @@
+/opt/rt4/local/man/man3/RT::Action::SendEmail_Vendor.3pm
+/opt/rt4/local/man/man3/RT::Extension::RichText::Images.3pm
+/opt/rt4/local/man/man3/RT::RichTextUpload.3pm
+/opt/rt4/local/man/man3/RT::RichTextUploads.3pm
+/opt/rt4/local/plugins/RT-Extension-RichText-Images/lib/RT/Action/SendEmail_Vendor.pm
+/opt/rt4/local/plugins/RT-Extension-RichText-Images/lib/RT/Extension/RichText/Images.pm
+/opt/rt4/local/plugins/RT-Extension-RichText-Images/lib/RT/RichTextUpload.pm
+/opt/rt4/local/plugins/RT-Extension-RichText-Images/lib/RT/RichTextUploads.pm

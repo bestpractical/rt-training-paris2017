@@ -1,0 +1,22 @@
+=head2 Wed Apr 26 12:52:09 2017: C<Module> L<RT::Extension::ParentComment|RT::Extension::ParentComment>
+
+=over 4
+
+=item *
+
+C<installed into: /opt/rt4/local/plugins/RT-Extension-ParentComment/lib>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 0.01>
+
+=item *
+
+C<EXE_FILES: >
+
+=back
+

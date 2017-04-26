@@ -1,0 +1,14 @@
+msgid "Search"
+msgstr "Find"
+
+msgid "Incident Reports"
+msgstr "Suspicious Events"
+#msgstr "Incident Candidates"
+
+msgid "Reports"
+msgstr "Events"
+#msgstr "Candidates"
+
+msgid "%1 changed from %2 to %3"
+msgstr "Just changed %1 to %3 from %2"
+

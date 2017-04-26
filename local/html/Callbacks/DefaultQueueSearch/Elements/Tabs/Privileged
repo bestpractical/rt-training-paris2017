@@ -1,0 +1,12 @@
+<%INIT>
+my $id = RT->Config->Get("DefaultQueue", $session{'CurrentUser'});
+my $queue = RT::Queue->new($session{CurrentUser});
+$queue->Load($id);
+
+my $queue_name = $queue->Name;
+
+my $query = "Queue = '$queue_name'";
+
+RT::Interface::Web::EscapeURI(\$query);
+Menu()->child('search')->child('tickets')->child('new')->path("/Search/Build.html?Query=$query");
+</%INIT>

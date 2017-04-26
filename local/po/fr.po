@@ -1,0 +1,5 @@
+msgid "Google"
+msgstr "Le Geugle"
+
+msgid "Search"
+msgstr "Search in French"

@@ -1,0 +1,22 @@
+=head2 Wed Apr 26 11:30:44 2017: C<Module> L<RT::Extension::RichText::Images|RT::Extension::RichText::Images>
+
+=over 4
+
+=item *
+
+C<installed into: /opt/rt4/local/plugins/RT-Extension-RichText-Images/lib>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 0.02>
+
+=item *
+
+C<EXE_FILES: >
+
+=back
+

@@ -1,0 +1,7 @@
+<%INIT>
+push @{$Fields}, 'StyledImpact';
+push @{$Fields}, 'OwnerChanges';
+</%INIT>
+<%ARGS>
+$Fields => undef
+</%ARGS>

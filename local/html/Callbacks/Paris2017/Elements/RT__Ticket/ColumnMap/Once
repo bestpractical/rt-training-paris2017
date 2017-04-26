@@ -1,0 +1,48 @@
+<%init>
+$COLUMN_MAP->{'StyledImpact'} = {
+        title     => 'Impact', # loc
+        attribute => 'Impact',
+        value     => sub {
+            my $ticket = shift;
+            if ($ticket->FirstCustomFieldValue('Impact') eq 'high') {
+                return (\'<span class="high-impact">', $ticket->FirstCustomFieldValue('Impact'), \'<span>');
+            }
+            else {
+                return $ticket->FirstCustomFieldValue('Impact');
+            }
+        }
+};
+$COLUMN_MAP->{'QueueName'} = {
+        title     => 'Queue', # loc
+        attribute => 'Queue',
+        value     => sub {
+            my $ticket = shift;
+            if ($ticket->FirstCustomFieldValue('Impact') eq 'high') {
+                return (\'<span class="high-impact">', $ticket->QueueObj->Name, \'<span>');
+            }
+            else {
+                return $ticket->QueueObj->Name;
+            }
+        }
+};
+$COLUMN_MAP->{'OwnerChanges'} = {
+        title     => 'Owner Changes', # loc
+        attribute => 'Owner Changes',
+        value     => sub {
+            my $ticket = shift;
+            my $txns = $ticket->Transactions;
+            $txns->Limit(
+                FIELD => 'Type',
+                VALUE => 'Set',
+            );
+            $txns->Limit(
+                FIELD => 'Field',
+                VALUE => 'Owner',
+            );
+            return $txns->Count;
+        }
+};
+</%init>
+<%args>
+$COLUMN_MAP
+</%args>
