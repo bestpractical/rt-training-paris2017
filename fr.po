@@ -1,0 +1,7 @@
+# /opt/rt4/local/po/fr.po
+
+msgid "Google"
+msgstr "Le Geugle"
+
+msgid "Search"
+msgstr "Search in French"
