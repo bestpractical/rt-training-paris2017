@@ -1,0 +1,23 @@
+<%args>
+$Path
+</%args>
+<%INIT>
+# if (PageMenu() && PageMenu()->child('actions')) {
+#     PageMenu()->child('actions')->delete('extract-article');
+# }
+
+return unless $Path =~ m{^/Ticket/};
+return unless $DECODED_ARGS->{id} and $DECODED_ARGS->{id} =~ /^(\d+)$/;
+ 
+my $id = $1;
+my $obj = RT::Ticket->new( $session{CurrentUser} );
+$obj->Load( $id );
+return unless $obj;
+
+#my $search = $obj->Subject;
+my $search = $obj->FirstCustomFieldValue('Search Terms');
+RT::Interface::Web::EscapeURI(\$search);
+
+PageMenu()->child('actions')->child('google-search', title => loc('Google This'), path => 'https://google.com/search?q=' . $search);
+
+</%INIT>
